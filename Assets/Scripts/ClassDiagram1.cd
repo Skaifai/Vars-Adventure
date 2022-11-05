@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Program">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <AssociationLine Name="timer" Type="Timer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9" Y="1.952" />
+        <Point X="9.375" Y="1.952" />
+        <Point X="9.375" Y="3.688" />
+        <Point X="10.5" Y="3.688" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="observerA" Type="Assets.Scripts.ObserverA" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="1.952" />
+        <Point X="7.125" Y="1.952" />
+        <Point X="7.125" Y="3.188" />
+        <Point X="5.5" Y="3.188" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="observerB" Type="Assets.Scripts.ObserverB" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="1.952" />
+        <Point X="7.125" Y="1.952" />
+        <Point X="7.125" Y="4.688" />
+        <Point X="5.5" Y="4.688" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="someSubject" Type="Assets.Scripts.SomeSubject" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="1.952" />
+        <Point X="6.051" Y="1.952" />
+        <Point X="6.051" Y="2.435" />
+        <Point X="3.873" Y="2.435" />
+        <Point X="3.873" Y="3.25" />
+        <Point X="3.75" Y="3.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="2.311" Y="1.391" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="spriteMaskController1" Type="SpriteMaskController" FixedFromPoint="true">
+      <Path>
+        <Point X="7.938" Y="3.704" />
+        <Point X="7.938" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.215" Y="0.305" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="spriteMaskController2" Type="SpriteMaskController" FixedFromPoint="true">
+      <Path>
+        <Point X="8.5" Y="3.704" />
+        <Point X="8.5" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.583" Y="0.387" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="agentMovement" Type="AgentMovement" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9" Y="1.952" />
+        <Point X="9.375" Y="1.952" />
+        <Point X="9.375" Y="1.437" />
+        <Point X="10.5" Y="1.437" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.125" Y="0.025" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAwIAAAAACAAIAAAAAAAAAAAACAATAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="timer" />
+      <Field Name="observerA" />
+      <Field Name="observerB" />
+      <Field Name="someSubject" />
+      <Field Name="spriteMaskController1" />
+      <Field Name="spriteMaskController2" />
+      <Field Name="agentMovement" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Timer">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAEAAAAAACAAAEAAQAAgAAAAgAAAAIIAAAAAEAAAI=</HashCode>
+      <FileName>Assets\Scripts\Timer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets.Scripts.ObserverA">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Observer Pattern\ObserverA.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="Assets.Scripts.ObserverB">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Observer Pattern\ObserverB.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="Assets.Scripts.SomeSubject">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAQCAAAAAAAQAAAAAAAAAAEACAAAAAAAAABQAAAI=</HashCode>
+      <FileName>Assets\Scripts\Observer Pattern\SomeSubject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpriteMaskController">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <AssociationLine Name="_tileStrategyController" Type="Assets.Scripts.Strategy_Pattern.TileDetectionStrategy.TileStrategyController" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="6.313" />
+        <Point X="7.125" Y="6.313" />
+        <Point X="7.125" Y="9.059" />
+        <Point X="6.25" Y="9.059" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.67" Y="1.852" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAWAgAAAIEgIBiAAADEAEAAAAAABgAAQIhGA=</HashCode>
+      <FileName>Assets\Scripts\SpriteMaskController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_tileStrategyController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AgentMovement">
+    <Position X="10.5" Y="1.25" Width="1.5" />
+    <AssociationLine Name="_currentCommand" Type="Assets.Scripts.QueableCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12" Y="1.937" />
+        <Point X="12.375" Y="1.937" />
+        <Point X="12.375" Y="3.438" />
+        <Point X="13.5" Y="3.438" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.05" Y="-0.204" Height="0.182" Width="1.389" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABACAABABAAA=</HashCode>
+      <FileName>Assets\Scripts\Command Pattern\AgentMovement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_currentCommand" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Assets.Scripts.QueableCommand">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAACQAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\Command Pattern\QueableCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Assets.Scripts.Strategy_Pattern.TileDetectionStrategy.NormalTilemapStrategy">
+    <Position X="2.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\Strategy Pattern\TileDetectionStrategy\NormalTilemapStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Assets.Scripts.Strategy_Pattern.TileDetectionStrategy.SmallTilemapStrategy">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\Strategy Pattern\TileDetectionStrategy\SmallTilemapStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Assets.Scripts.Strategy_Pattern.TileDetectionStrategy.TileStrategyController">
+    <Position X="4.75" Y="8.25" Width="1.5" />
+    <AssociationLine Name="_tileStrategy" Type="Assets.Scripts.Strategy_Pattern.TileDetectionStrategy.ITileStrategy" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="8.688" />
+        <Point X="4.375" Y="8.688" />
+        <Point X="4.375" Y="7.302" />
+        <Point X="3.75" Y="7.302" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.113" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\Strategy Pattern\TileDetectionStrategy\TileStrategyController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_tileStrategy" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="IObserver">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Observer Pattern\IObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ISubject">
+    <Position X="2.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAACAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Observer Pattern\ISubject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ICommand">
+    <Position X="13.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\Command Pattern\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Assets.Scripts.Strategy_Pattern.TileDetectionStrategy.ITileStrategy">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\Strategy Pattern\TileDetectionStrategy\ITileStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
