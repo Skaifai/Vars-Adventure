@@ -28,6 +28,7 @@ public class Timer : MonoBehaviour
     /// The duration can only be set if the timer isn't currently running.
     /// </summary>
     /// <value>duration</value>
+    
     public float Duration
     {
         set

@@ -10,6 +10,8 @@ public class Program : MonoBehaviour
     // Timer support.
     Timer timer;
 
+    Timer attackTimer;
+
     #region Observer Pattern Fields
     
     // Trigger colliders game object in the scene, it contains every trigger collider
@@ -20,15 +22,15 @@ public class Program : MonoBehaviour
     private ObserverB observerB;
     private SomeSubject someSubject;
 
-    #endregion
     [SerializeField]
     private KnightObserver knightObserver;
 
     [SerializeField]
-    private Animator knightAnimator;
+    private EnemyObserver enemyObserver;
 
     [SerializeField]
-    private SpriteRenderer knightSpriteRenderer;
+    private EnemyBehaviour enemyBehaviour;
+    #endregion
 
     #region Singleton Pattern Fields
 
@@ -42,9 +44,15 @@ public class Program : MonoBehaviour
     [SerializeField]
     GameObject agentObject;
 
+    [SerializeField]
+    GameObject weaponHolder;
+
     NavMeshAgent navMeshAgentComp;
 
-    AgentMovement agentMovement;
+    PlayerControls playerControls;
+
+    [SerializeField]
+    KnightBehaviour knightBehaviour;
     #endregion
 
     private void Awake()
@@ -58,9 +66,9 @@ public class Program : MonoBehaviour
         navMeshAgentComp.updateRotation = false;
         navMeshAgentComp.updateUpAxis = false;
 
-        // Assigning the AgentMovement class an object.
+        // Assigning the PlayerControls class an object.
         // This class serves as an Invoker of the commands
-        agentMovement = new AgentMovement(navMeshAgentComp);
+        playerControls = new PlayerControls(navMeshAgentComp, attackTimer);
         #endregion
     }
     // Start is called before the first frame update.
@@ -96,7 +104,13 @@ public class Program : MonoBehaviour
 
         #endregion
 
-        agentMovement.Subscribe(knightObserver);
+        attackTimer = gameObject.AddComponent<Timer>();
+
+        playerControls.SetTimerObject(attackTimer);
+
+        playerControls.Subscribe(knightObserver);
+
+        enemyBehaviour.Subscribe(enemyObserver);
     }
 
     // Update is called once per frame.
@@ -122,8 +136,14 @@ public class Program : MonoBehaviour
 
         #region Command Pattern Implementation
 
-        agentMovement.ListenForCommands();
-        agentMovement.ProcessCommands();
+        playerControls.ListenForMoveCommands();
+        playerControls.ProcessMovingCommands();
+
+        if (knightBehaviour.HasWeapon == true)
+        {
+            playerControls.ListenForAttackCommands();
+            playerControls.ProcessAttackCommand();
+        }
 
         #endregion
     }

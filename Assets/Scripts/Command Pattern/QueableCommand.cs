@@ -11,7 +11,8 @@ namespace Assets.Scripts
     public class QueableMovementCommand : ICommand
     {
         private Vector3 _destination;
-        NavMeshAgent _agent;
+        private NavMeshAgent _agent;
+        public float DestinationXCoord;
 
         public bool IsFinished
         {
@@ -22,7 +23,6 @@ namespace Assets.Scripts
             }
         }
 
-        public float DestinationXCoord;
 
         public void Execute()
         {
@@ -31,9 +31,9 @@ namespace Assets.Scripts
 
         public QueableMovementCommand(Vector3 targetPosition, NavMeshAgent navMeshAgent)
         {
-            _destination = targetPosition;
+            this._destination = targetPosition;
             DestinationXCoord = _destination.x;
-            _agent = navMeshAgent;
+            this._agent = navMeshAgent;
         }
     }
 }

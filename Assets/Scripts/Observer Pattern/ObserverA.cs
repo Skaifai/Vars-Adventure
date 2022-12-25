@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
@@ -15,6 +16,7 @@ namespace Assets.Scripts
         public void Check(ISubject subject)
         {
             if (((SomeSubject)subject).ZoneEntered) Debug.Log("Player has entered the zone!");
+            
         }
     }
 }

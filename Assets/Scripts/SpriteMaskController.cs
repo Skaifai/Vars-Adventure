@@ -23,6 +23,7 @@ public sealed class SpriteMaskController : MonoBehaviour
     // Player's position support.
     int x, y;
 
+    // Height and width of the checking area.
     [SerializeField]
     const int HeightOfTheArea = 3;
     [SerializeField]
@@ -113,7 +114,6 @@ public sealed class SpriteMaskController : MonoBehaviour
 
         // Player position rounded (floored).
         playerPositionRounded = new Vector3Int(x, y, 0);
-        //Debug.Log("Player position rounded: " + playerPositionRounded);
 
         // Acquiring nine tiles' positions below and around the character.
         // Using the strategy pattern.
@@ -145,9 +145,6 @@ public sealed class SpriteMaskController : MonoBehaviour
         // the tilemap is added to an apropriate list.
         if (tilemap != null)
         {
-            //Debug.Log("Entered!");
-            //tilemap.GetComponent<TilemapRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
-
             if (tilemap.GetComponentInParent<Grid>().cellSize.y == 1) _otherNormalTilemaps.Add(tilemap);
             else if (tilemap.GetComponentInParent<Grid>().cellSize.y < 1) _otherSmallTilemaps.Add(tilemap);
 
@@ -169,9 +166,6 @@ public sealed class SpriteMaskController : MonoBehaviour
         // the tilemap is removed from an apropriate list.
         if (tilemap != null)
         {
-            //Debug.Log("Exited!");
-            //tilemap.GetComponent<TilemapRenderer>().maskInteraction = SpriteMaskInteraction.None;
-
             if (tilemap.GetComponentInParent<Grid>().cellSize.y == 1) _otherNormalTilemaps.Remove(tilemap);
             else if (tilemap.GetComponentInParent<Grid>().cellSize.y < 1) _otherSmallTilemaps.Remove(tilemap);
 
@@ -197,32 +191,14 @@ public sealed class SpriteMaskController : MonoBehaviour
         }
     }
 
-    private void GetTilePositions(List<Vector3Int> listToEdit, int xPosition, int yPosition)
-    {
-        for (int j = 0; j < HeightOfTheArea; j++)
-        {
-            for (int i = 0; i < WidthOfTheArea; i++)
-            {
-                listToEdit[i + 3 * j] = new Vector3Int(xPosition - 1 + i, yPosition - j, 0);
-            }
-        }
-    }
-
     private void CheckTilesInTilemaps(List<Tilemap> tilemaps, List<Vector3Int> tilePositions)
     {
         foreach(Tilemap tilemap in tilemaps)
         {
-            //Debug.Log(tilemap);
-
-            //if (_playerSpriteRenderer.sortingLayerName == tilemap.GetComponent<TilemapRenderer>().sortingLayerName) Debug.Log("First condition is true.");
-
-            //if (_playerSpriteRenderer.sortingOrder <= tilemap.GetComponent<TilemapRenderer>().sortingOrder) Debug.Log("Second condition is true.");
 
             for (int i = 0; i < tilePositions.Count;  i++)
             {
                 Tile tile = tilemap.GetTile<Tile>(tilePositions[i]);
-
-                //if (tile != null) Debug.Log("Third condition is true.");
 
                 if (
                     _playerSpriteRenderer.sortingLayerName == tilemap.GetComponent<TilemapRenderer>().sortingLayerName

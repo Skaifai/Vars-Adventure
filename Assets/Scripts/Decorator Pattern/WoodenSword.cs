@@ -7,16 +7,13 @@ using UnityEngine;
 
 namespace Assets.Scripts.Decorator_Pattern
 {
-    internal class IronSword : WeaponItem
+    internal class WoodenSword : WeaponItem
     {
-        // Damage of the Irons Sword weapon
         private int weaponDamage;
 
         public override int DealDamage()
         {
-            weaponDamage = UnityEngine.Random.Range(5, 10);
-
-            Debug.Log("");
+            weaponDamage = UnityEngine.Random.Range(3, 6);
 
             return weaponDamage;
         }

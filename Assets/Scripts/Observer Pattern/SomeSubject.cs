@@ -24,11 +24,6 @@ namespace Assets.Scripts
         // The state that checks if the player entered a certain zone (collider)
         public bool ZoneEntered { get; set; } = false;
 
-        // First state
-        public bool FiveSecsPassed { get; set; } = false;
-
-        // Second state
-        public bool TenSecsPassed { get; set; } = false;
         #endregion
 
         #region Interface methods
